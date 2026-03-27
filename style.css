@@ -511,41 +511,47 @@ section.show {
 }
 @media (max-width: 768px) {
 
-  h1 {
-    font-size: 32px;
+  #landing {
+    padding: 40px 15px;
+  }
+
+  #landing h1 {
+    font-size: 32px !important;
     text-align: center;
   }
 
-  p {
-    font-size: 14px;
-    text-align: center;
-  }
-
-  .top-nav {
-    gap: 15px;
-    font-size: 12px;
-  }
-
-  section {
-    padding: 20px;
+  #landing p {
+    font-size: 14px !important;
     text-align: center;
   }
 
   .cards {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 20px !important;
   }
 
   .card {
-    width: 90%;
+    width: 90% !important;
+    max-width: 320px;
+    margin: 10px auto;
     transform: none !important;
   }
 
   .planet {
-    width: 80%;
-    right: -20px;
-    bottom: -20px;
+    width: 90% !important;
+    max-width: 300px;
+    right: 0 !important;
+    bottom: -20px !important;
+    opacity: 0.6;
+  }
+
+  .top-nav {
+    gap: 12px;
+    font-size: 11px;
+  }
+
+}
     opacity: 0.7;
   }
 
