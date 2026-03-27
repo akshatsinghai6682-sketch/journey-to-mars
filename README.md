@@ -18,7 +18,7 @@ Tech Used
 - JavaScript
 
 Live Demo
-(Add your GitHub Pages link here)
+https://akshatsinghai6682-sketch.github.io/journey-to-mars/
 
 Author
 Akshat Singhai
