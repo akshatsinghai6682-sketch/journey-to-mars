@@ -9,6 +9,7 @@
 </head>
 
 <body>
+    <div id="progress"></div>
     <div class="top-nav">
         <span onclick="goTo('#hero')">Origin</span>
         <span onclick="goTo('#launch')">Launch</span>
@@ -18,19 +19,19 @@
     <div class="mouse-glow"></div>
     <section id="hero">
         <h1>Journey to Mars</h1>
-        <p>Scroll to begin</p>
-        <a href="#launch" class="begin-btn">BEGIN JOURNEY</a>
+        <p>Earth fades behind you... <br>
+        there is no turning back now.</p>
+        <button onclick="goTo('#launch')"class="begin-btn">BEGIN JOURNEY</button>
     </section>
     <section id="launch">
         <h1>Launch Phase</h1>
-        <p>Engines ignite,countdown begins
-            The mission is ready
-        </p>
+        <p>The engines ignite. <br>
+    Humanity takes its first step towards Mars.</p>
     </section>
     <section id="space" class="fade">
         <h1>Deep Space</h1>
-        <p>Drifting through the silent cosmos
-            Beyond Earth,into the unknown
+        <p>Silence surrounds you. <br>
+            You are now drifting in the vast unknown.
         </p>
         <img src="abstract-landscape-with-photorealistic-view-moon.jpg" class="planet">
     </section>
@@ -38,6 +39,8 @@
         <h1>Explore Mars<br>
             <span>Uncovering its mysteries</span>
         </h1>
+        <p>A new world appears. <br>
+        Mars is no longer a dream.</p>
         <div class="cards">
             <div class="card">
                 <h2>Olympus Mons</h2>
@@ -58,9 +61,9 @@
         </div>
     </section>
     <section id="explore">
-        <h1>Exploration</h1>
-        <p>Mars was just the beginning</p>
-        <p>But The universe is still waiting</p>
+        <h1>The Journey Never Ends</h1>
+        <p>What lies beyond is yours to discover.</p>
+        
     </section>
     <script src="script.js"></script>
 </body>
