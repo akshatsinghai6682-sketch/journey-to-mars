@@ -1,0 +1,347 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: rgb(0, 0, 0);
+    color: white;
+    font-family: "Poppins",sans-serif;
+}
+section{
+height: 100vh;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+h1{
+font-size: 50px;
+font-weight: bold;
+margin-bottom: 10px;
+}
+p{
+font-size: 20px;
+color: lightgrey;
+animation: float 2s ease-in-out infinite;
+}
+@keyframes float{
+0%{
+transform: translateY(0);
+opacity: 0.6;
+}
+50%{
+transform: translateY(10px);
+opacity: 1;
+}
+100%{
+transform:translateY(0);
+opacity: 0.6;
+}
+}
+#launch{
+background: radial-gradient(circle at center,#ff7a00,#ff3c00,#1a0d00);
+gap: 20px;
+animation:pulse 3s infinite;
+}
+@keyframes pulse{
+0%{
+transform: scale(1);
+}
+50%{
+transform: scale(1.03);
+}
+100%{
+transform: scale(1);
+}
+}
+#launch h1{
+text-shadow:0 0 25px rgba(255,80,0,0.9);
+}
+#launch p{
+text-shadow: 0 0 12px rgba(255,120,0,0.7);
+opacity: 0.8;
+}
+#space{
+position: relative;
+background: radial-gradient(circle at center,#000814,#000000);
+color: white;
+overflow: hidden;
+width: 100%;
+}
+#space::before{
+top: 0;
+left: 0;
+content: "";
+position: absolute;
+width: 2px;
+height: 2px;
+background: white;
+box-shadow: 
+100px 200px white,
+300px 400px white,
+500px 100px white,
+700px 300px white,
+900px 600px white,
+1200px 200px white,
+1500px 500px white,
+1700px 300px white;
+animation: starsMove 40s linear infinite;
+}
+@keyframes starsMove{
+from{
+transform: translateY(0);
+}
+to{
+transform:translateY(-1000px);
+}
+}
+#space h1{
+font-size: 50px;
+margin-bottom: 10px;
+text-shadow: 0 0 10px rgba(255,255,255,0.5);
+}
+.fade{
+opacity: 0;
+transform: translateY(30px);
+transition: all 1s ease;
+}
+.fade.show{
+opacity: 1;
+transform: translateY(0);
+}
+#space p{
+font-size: 18px;
+opacity: 0.7;
+}
+.planet{
+width: 450px;
+position: absolute;
+right: -40px;
+bottom: -40px;
+max-width: 55%;
+opacity: 0.95;
+z-index: 1;
+filter: drop-shadow(0 0 40px rgba(255,255,255,0.6));
+}
+.fade{
+opacity: 0;
+transform: translateY(40px);
+transition: all 0.8s ease;
+}
+.fade.show{
+opacity: 1;
+transform: translateY(0);
+}
+
+#landing.show{
+opacity: 1;
+transform: scale(1);
+}
+#landing h1 {
+  color: white;
+  font-size: 3rem;
+  text-align: center;
+}
+
+#landing p {
+color:#ccc;
+}
+
+
+#landing.show h1 {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+#landing.show p {
+  transform: translateY(0);
+  opacity: 1;
+}
+#explore {
+  min-height: 100vh;
+  padding: 50px;
+  text-align: center;
+  background: black;
+  color: white;
+  background: 
+  linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)),
+  url("fiery-planet-universe.jpg");
+}
+
+#explore h1 {
+  margin-bottom: 40px;
+}
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  width: 220px;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  transition: all 0.4s ease;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+
+.card:nth-child(2),
+.card:nth-child(3) {
+  transform: scale(1.1);
+}
+
+.card:hover {
+  transform: translateY(-15px) scale(1.15);
+  box-shadow: 0 0 25px rgba(255, 100, 0, 0.8);
+  opacity: 1;
+}
+
+
+
+.cards:hover .card {
+  opacity: 0.3;
+}
+
+.cards .card:hover {
+  opacity: 1;
+}
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
+}
+
+.card {
+  animation: float 4s ease-in-out infinite;
+  display: flex;
+  justify-content: center;
+  gap:40px;
+  flex-wrap: wrap;
+  width: 200px;
+}
+.card h2 {
+  color: white;
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: rgba(255,255,255,0.7);
+  font-size: 14px;
+}
+#landing{
+background: url("fiery-planet-universe.jpg");
+background-size: cover;
+background-position: center;
+}
+#landing::before{
+content:"";
+position: absolute;
+inset:0;
+background: rgba(0,0,0,0.4);
+}
+#landing *{
+position: relative;
+z-index: 1;
+}
+#hero h1{
+font-weight: bold;
+}
+.card {
+  background: rgba(0,0,0,0.4);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.15);
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.6s ease;
+}
+.card.show{
+opacity: 1;
+transform: translateY(0);
+}
+
+.card:hover {
+  transform: translateY(-12px) scale(1.08);
+  box-shadow: 0 0 35px rgba(255, 80, 0, 0.6);
+  border: 1px solid rgba(255, 120, 0, 0.4);
+}
+.card:hover {
+  transform: translateY(-15px) scale(1.1);
+  background: rgba(255, 80, 0, 0.2);
+  box-shadow: 0 0 30px rgba(255, 80, 0, 0.6);
+  opacity: 1;
+}
+#hero h1{
+font-weight: 900;
+font-size: 60px;
+}
+#hero{
+background: radial-gradient(circle,#111,#000);
+}
+.card {
+  opacity: 0.6;
+}
+
+.cards .card:nth-child(2),
+.cards .card:nth-child(3) {
+  opacity: 1;
+}
+#hero p{
+font-size: 18px;
+opacity: 0.8;
+letter-spacing: 1px;
+}
+#hero h1 {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+#explore p{
+opacity: 0.8;
+letter-spacing: 1px;
+}
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
+}
+
+.card {
+  animation: float 4s ease-in-out infinite;
+}
+#hero h1 {
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px rgba(255,255,255,0.3);
+  }
+  to {
+    text-shadow: 0 0 25px rgba(255,255,255,0.6);
+  }
+}
+html {
+  scroll-behavior: smooth;
+}
+section {
+  transition: all 0.8s ease;
+}
+
+section.show {
+  opacity: 1;
+  transform: translateY(0);
+}

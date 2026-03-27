@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journey to Mars</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="top-nav">
+        <span onclick="goTo('#hero')">Origin</span>
+        <span onclick="goTo('#launch')">Launch</span>
+        <span onclick="goTo('#space')">Space</span>
+        <span onclick="goTo('#landing')">Mars</span>
+    </div>
+    <div class="mouse-glow"></div>
+    <section id="hero">
+        <h1>Journey to Mars</h1>
+        <p>Scroll to begin</p>
+        <a href="#launch" class="begin-btn">BEGIN JOURNEY</a>
+    </section>
+    <section id="launch">
+        <h1>Launch Phase</h1>
+        <p>Engines ignite,countdown begins
+            The mission is ready
+        </p>
+    </section>
+    <section id="space" class="fade">
+        <h1>Deep Space</h1>
+        <p>Drifting through the silent cosmos
+            Beyond Earth,into the unknown
+        </p>
+        <img src="abstract-landscape-with-photorealistic-view-moon.jpg" class="planet">
+    </section>
+    <section id="landing">
+        <h1>Explore Mars<br>
+            <span>Uncovering its mysteries</span>
+        </h1>
+        <div class="cards">
+            <div class="card">
+                <h2>Olympus Mons</h2>
+                <p>the largest volcano in the solar system</p>
+            </div>
+            <div class="card">
+                <h2>Valles Marineris</h2>
+                <p>A massive canyon stretching across Mars</p>
+            </div>
+            <div class="card">
+                <h2>Atmosphere</h2>
+                <p>Thin and mostly carbon dioxide</p>
+            </div>
+            <div class="card">
+                <h2>Rovers</h2>
+                <p>Robots exploring the Martian surface</p>
+            </div>
+        </div>
+    </section>
+    <section id="explore">
+        <h1>Exploration</h1>
+        <p>Mars was just the beginning</p>
+        <p>But The universe is still waiting</p>
+    </section>
+    <script src="script.js"></script>
+</body>
+
+</html>
