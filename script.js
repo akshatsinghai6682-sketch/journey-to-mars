@@ -1,74 +1,75 @@
-window.addEventListener("scroll",()=>{
-const section=
-document.querySelector('#space');
-const position=
-section.getBoundingClientRect().top;
-const screenHeight=
-window.innerHeight;
-if(position<screenHeight-100){
-section.classList.add("show");
-}
-});
-const faders=document.querySelectorAll(".fade");
-window.addEventListener("scroll",()=>{
-faders.forEach((section)=>{
-const top=section.getBoundingClientRect.top;
-const screenHeight=window.innerHeight
-if(top<screenHeight-100){
-section.classList.add("show");
-}
-})
-})
-window.addEventListener("scroll",function(){
-const landing=document.getElementById("landing");
-const position=landing.getBoundingClientRect().top;
-const screenHeight=window.innerHeight;
-if(position<screenHeight-100){
-landing.classList.add("show");
-}
-})
-window.addEventListener("scroll", function () {
-  const landing = document.getElementById("landing");
-
-  const rect = landing.getBoundingClientRect();
-  const screenHeight = window.innerHeight;
-
-  
-  if (rect.top < screenHeight - 100) {
-    landing.classList.add("show");
-  }
-
-  
-  const scrollY = window.scrollY;
-
-  landing.style.backgroundPosition = `center ${scrollY * 0.3}px`;
-});
-const explore = document.getElementById("explore");
-
-window.addEventListener("scroll", function () {
-  const rect = explore.getBoundingClientRect();
-
-  if (rect.top < window.innerHeight - 100) {
-    explore.classList.add("show");
-  }
-});
+const sections = document.querySelectorAll("section");
 const cards = document.querySelectorAll(".card");
 
-cards.forEach(card => {
-  card.addEventListener("click", () => {
-    alert("More details coming soon 🚀");
-  });
-});
-const cards2 = document.querySelectorAll(".card");
+function handleScroll() {
 
-window.addEventListener("scroll", () => {
-  cards2.forEach((card, index) => {
+  sections.forEach(section => {
+    const rect = section.getBoundingClientRect();
+
+    if (rect.top < window.innerHeight - 100) {
+      section.classList.add("show");
+    }
+  });
+
+  cards.forEach((card, index) => {
     const rect = card.getBoundingClientRect();
 
     if (rect.top < window.innerHeight - 50) {
       setTimeout(() => {
         card.classList.add("show");
-      }, index * 200); 
+      }, index * 120);
     }
   });
+
+  const landing = document.getElementById("landing");
+  if (landing) {
+    const scrollY = window.scrollY;
+    landing.style.backgroundPosition = `center ${scrollY * 0.3}px`;
+  }
+}
+
+window.addEventListener("scroll", handleScroll);
+handleScroll(); // 🔥 important
+
+document.querySelector("#hero").classList.add("show");
+
+cards.forEach(card => {
+  card.addEventListener("click", () => {
+    alert("More details coming soon");
+  });
+});
+
+window.addEventListener("load", () => {
+  document.getElementById("hero").classList.add("show");
+});
+
+const glow = document.querySelector(".mouse-glow");
+
+if (glow) {
+  document.addEventListener("mousemove", (e) => {
+    glow.style.left = e.clientX + "px";
+    glow.style.top = e.clientY + "px";
+  });
+}
+window.goTo = function(selector) {
+  const el = document.querySelector(selector);
+
+  if (el) {
+    
+    setTimeout(() => {
+      el.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+    }, 100);
+  }
+};
+window.addEventListener("scroll", () => {
+  const scroll = window.scrollY;
+  const height = document.body.scrollHeight - window.innerHeight;
+  document.getElementById("progress").style.width =
+    (scroll / height) * 100 + "%";
+});
+window.addEventListener("load", () => {
+  window.scrollTo(0, 0);
 });
