@@ -556,3 +556,29 @@ section.show {
   }
 
 }
+@media (max-width: 768px) {
+
+  #landing {
+    padding: 60px 15px 120px;
+  }
+
+  .planet {
+    width: 110% !important;
+    max-width: none;
+    right: -20% !important;
+    bottom: -80px !important;
+    opacity: 0.35 !important;
+    filter: blur(2px);
+  }
+
+  .cards {
+    margin-top: 30px;
+    gap: 25px !important;
+  }
+
+  .card {
+    padding: 25px 20px;
+    border-radius: 20px;
+  }
+
+}
