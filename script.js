@@ -29,7 +29,7 @@ function handleScroll() {
 }
 
 window.addEventListener("scroll", handleScroll);
-handleScroll(); // 🔥 important
+handleScroll(); 
 
 document.querySelector("#hero").classList.add("show");
 
