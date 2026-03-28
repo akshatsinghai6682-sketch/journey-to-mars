@@ -54,15 +54,14 @@ if (glow) {
 window.goTo = function(selector) {
   const el = document.querySelector(selector);
 
-  if (el) {
-    
-    setTimeout(() => {
-      el.scrollIntoView({
-        behavior: "smooth",
-        block: "start"
-      });
-    }, 100);
-  }
+  if (!el) return;
+
+  const y = el.getBoundingClientRect().top + window.pageYOffset;
+
+  window.scrollTo({
+    top: y,
+    behavior: "smooth"
+  });
 };
 window.addEventListener("scroll", () => {
   const scroll = window.scrollY;
