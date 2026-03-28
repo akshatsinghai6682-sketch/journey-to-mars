@@ -16,6 +16,8 @@ html {
 .begin-btn{
 position:relative;
     z-index:10;
+    display:inline-block;
+    cursor:pointer;
 }
 .mouse-glow,.planet{
 pointer-events:none;
