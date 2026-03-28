@@ -60,10 +60,16 @@ behavior:"smooth",
 block:"start"
 });
 };
+
 window.addEventListener("scroll", () => {
   const scroll = window.scrollY;
   const height = document.body.scrollHeight - window.innerHeight;
   document.getElementById("progress").style.width =
     (scroll / height) * 100 + "%";
+});
+document.getElementById("startBtn").addEventListener("click", function () {
+  document.getElementById("launch").scrollIntoView({
+    behavior: "smooth"
+  });
 });
 
