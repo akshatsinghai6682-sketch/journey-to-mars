@@ -55,13 +55,10 @@ window.goTo = function(selector) {
   const el = document.querySelector(selector);
 
   if (!el) return;
-
-  const y = el.getBoundingClientRect().top + window.pageYOffset;
-
-  window.scrollTo({
-    top: y,
-    behavior: "smooth"
-  });
+el.scrollIntoView({
+behavior:"smooth",
+block:"start"
+});
 };
 window.addEventListener("scroll", () => {
   const scroll = window.scrollY;
@@ -69,6 +66,4 @@ window.addEventListener("scroll", () => {
   document.getElementById("progress").style.width =
     (scroll / height) * 100 + "%";
 });
-window.addEventListener("load", () => {
-  window.scrollTo(0, 0);
-});
+
