@@ -13,8 +13,16 @@ body{
 html {
   scroll-behavior: smooth;
 }
-
-
+.begin-btn{
+position:relative;
+    z-index:10;
+}
+.mouse-glow,.planet{
+pointer-events:none;
+}
+button{
+cursor:pointer
+}
 section {
   scroll-snap-align: start;
 }
