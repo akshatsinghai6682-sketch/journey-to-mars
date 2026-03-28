@@ -10,7 +10,12 @@ body{
     color: white; 
     font-family: "Poppins",sans-serif;
 }
-
+#hero::before,
+#explore::before,
+.mouse-glow,
+.planet {
+  pointer-events: none !important;
+}
 
 
 
